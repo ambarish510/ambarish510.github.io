@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title> sample for datalist </title>
+</head>
+<body>
+  <input list="simpledatalist" type="text">
+  <datalist id="simpledatalist">
+    <option value="small" ></option>
+    <option value="medium"selected="selected"><test1>
+    <option value="large"/>
+  </datalist>
+
+  <input list="hosting-plan" type="text" value=""/>
+  <datalist id="hosting-plan">
+  </datalist>
+<script>
+    var listOfItems= ["item1", "item2", "item3"];
+    var temp;
+    for(temp in listOfItems){
+      var optionNode = document.createElement("option");
+      optionNode.value = listOfItems[temp];
+      document.getElementById("hosting-plan").appendChild(optionNode);
+    }
+</script>
+</body>
+</html>
